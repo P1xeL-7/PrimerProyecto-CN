@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contador de click</title>
 </head>
 <body>
-    <h1>Hola</h1>
+    <h1>Contador</h1>
+    <p>Numero de veces <span id="Contador">0</span></p>
+    <div>
+        <button onclick="Contador">Haz click aqui</button>
+    </div>
+    <script>
+        let Contador=0
+        ContadorSpan=document.getElementById("Contador")
+        function ContadorClick(){
+            Contador++
+            ContadorSpan.textContent=Contador
+        }
+
+        document.addEventListener("click", ContadorClick)
+    </script>
 </body>
 </html>
